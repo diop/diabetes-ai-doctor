@@ -10,54 +10,48 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: Text('Diabetese AI Doctor'),
       ),
       body: Column(
         children: <Widget>[
           Expanded(child: Row(
             children: <Widget>[
-              Expanded(child: Container(
-                margin: EdgeInsets.all(15.0),
-                decoration: BoxDecoration(
-                  color: Color(0xFF1D1E33),
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-              ),),
-              Expanded(child: Container(
-        margin: EdgeInsets.all(15.0),
-        decoration: BoxDecoration(
-          color: Color(0xFF1D1E33),
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-      ),)
+              Expanded(
+                child: ReusableCard(),
+              ),
+              Expanded(
+                child: ReusableCard(),
+              )
             ],
           )),
-          Expanded(child: Container(
-        margin: EdgeInsets.all(15.0),
-        decoration: BoxDecoration(
-          color: Color(0xFF1D1E33),
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-      ),),
+          Expanded(
+            child: ReusableCard(),
+          ),
           Expanded(child: Row(
             children: <Widget>[
-              Expanded(child: Container(
-        margin: EdgeInsets.all(15.0),
-        decoration: BoxDecoration(
-          color: Color(0xFF1D1E33),
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-      ),),
-              Expanded(child: Container(
-        margin: EdgeInsets.all(15.0),
-        decoration: BoxDecoration(
-          color: Color(0xFF1D1E33),
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-      ),)
+              Expanded(
+                child: ReusableCard(),
+              ),
+              Expanded(
+                child: ReusableCard(),
+              ),
             ],
           )),
         ],
+      ),
+    );
+  }
+}
+
+class ReusableCard extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(15.0),
+      decoration: BoxDecoration(
+        color: Color(0xFF1D1E33),
+        borderRadius: BorderRadius.circular(10.0),
       ),
     );
   }
